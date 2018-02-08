@@ -1,0 +1,110 @@
+body {
+  background:url("../img/ice.jpg") fixed no-repeat;
+  background-size: cover;
+  }
+
+  .wrapper{
+    display:grid;
+    grid-template-columns: 10em 10em auto 10em 10em;
+    grid-auto-rows:minmax(100px, auto);
+    grid-gap:1em;
+    justify-items:stretch;
+    align-items:stretch;
+  }
+  .wrapper > div{
+    padding:0em;
+  }
+
+  /* large baby picture */
+  .header {
+    grid-column: 3;
+    grid-row: 1/7;
+  }
+  .header img{
+      width: 100%;
+  }
+
+  /* hexagram images */
+  .box{
+    width: 10em;
+    overflow: hidden;
+  }
+  .box img{
+    max-width: 100%;
+  }
+  .box:hover img{
+    margin-top:-220px;
+    display:block;
+    position: absolute;
+    top: 12vw;
+    left: 24vw;
+    height: 96vh;
+    -webkit-transition: margin 1s;
+    -moz-transition: margin 1s;
+    transition: margin 1s;
+  }
+
+  /* paragraph text styling...to be invisible until hovered over */
+  .box p {
+    font: 30px courier;
+    font-weight: bold;
+    color: orange;
+    display: none;
+    text-shadow: 2px 2px 5px #888;
+    align-items: center;
+  }
+  .box:hover p {
+    display: inline;
+  }
+
+/* screen resizing... not too happy with results, choppy. */
+
+@media (max-width: 1440px) {
+.header {
+  grid-column: 2;
+}
+.wrapper {
+  grid-template-columns: 10em auto 10em;
+}
+}
+
+@media (max-width: 1089px) {
+.wrapper {
+  grid-template-columns: auto;
+}
+.box:hover img{
+margin-top:-220px;
+display:block;
+position: absolute;
+top: 15em;
+left: 10vw;
+width: 80vh;
+-webkit-transition: margin 1s;
+-moz-transition: margin 1s;
+transition: margin 1s; }
+
+}
+@media (max-width: 900px) {
+.header {
+  grid-column: 1/5;
+  grid-row: 1;
+}
+.wrapper {
+  grid-template-columns: 10em 10em 10em 10em;
+}
+}
+@media (max-width: 855px) {
+.header img {
+  min-height: 10px;
+  min-width: 10px;
+  width: 100vw;
+}
+}
+@media (max-width: 547px) {
+.header {
+  grid-column: 1/4;
+}
+.wrapper {
+  grid-template-columns: 10em 10em 10em;
+}
+}
