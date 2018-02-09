@@ -14,6 +14,10 @@ body {
   .wrapper > div{
     padding:0em;
   }
+/* Sketch page images */
+  .sketch {
+    max-width: 100%;
+  }
 
   /* large baby picture */
   .header {
