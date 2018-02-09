@@ -1,4 +1,5 @@
-const HTMLyear = document.getElementById('year')
+document.getElementById("year").innerHTML = Date();
+
 
 count = 0;
 
